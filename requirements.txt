@@ -1,0 +1,6 @@
+python-docx
+pandas
+scikit-learn
+flask
+pdfplumber
+ollama

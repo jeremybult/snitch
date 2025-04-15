@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Document Analysis</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Upload Document for Analysis</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Upload</button>
+    </form>
+    {% if report %}
+        <h2>Analysis Report</h2>
+        <pre>{{ report }}</pre>
+        <a href="/download/{{ new_doc_path }}">Download Revised Document</a>
+    {% endif %}
+</body>
+</html>
